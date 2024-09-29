@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Random Emoji Pop-ups",
+    "name": "HiEmoji",
     "version": "1.0",
     "description": "Event triggered when users input value which will lead to random emoji pop-up",
     "permissions": ["storage"],

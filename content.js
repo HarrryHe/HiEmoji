@@ -1,18 +1,33 @@
 "use strict";
 document.addEventListener('keydown', handleKeyDown);
+let count = 0;
+let trigger = false;
 
 //only for those text inputs and only input number or keys
 function handleKeyDown(event) {
     const target = event.target;
     if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
         if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
-            const key = event.key;
-            //filter special keys
-            if (/^[a-zA-Z0-9]$/.test(key)) {
-                console.log('Pressed: ', key);
-                showRandomEmoji();
-            } else {
-                console.log(`ignore: ${key}`);
+            if(!trigger){
+
+                const key = event.key;
+                //filter special keys
+                if (/^[a-zA-Z0-9]$/.test(key)) {
+                    console.log('Pressed: ', key);
+                    showRandomEmoji();
+                    count++;
+                } else {
+                    console.log(`ignore: ${key}`);
+                }
+            }
+
+            if (count >= 5) {
+                trigger = true;
+                count = 0;
+
+                setTimeout(() => {
+                    trigger = false;
+                }, 2500);
             }
         }
     }
@@ -44,8 +59,13 @@ function showRandomEmoji() {
     }, 100);
     
     setTimeout(() => {
+        emojiDiv.style.bottom = '0px';
         emojiDiv.style.opacity = '0';
+        //emojiDiv.remove();
+    }, 2000);
+
+    setTimeout(() => {
         emojiDiv.remove();
-    }, 3000);
+    }, 4000);
 
 }
