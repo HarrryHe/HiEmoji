@@ -4,7 +4,7 @@ HiEmoji😋 is a simple browser extension that displays random emoji pop-ups whe
 
 ## SetUp 🎇
 
-1. Download or clone this repository by pasting this command `git clone https://github.com/HarrryHe/HiEmoji.git`.
+1. Download or clone this repository by copy and paste this command `git clone https://github.com/HarrryHe/HiEmoji.git` in your console.
 2. Open your Chrome browser and navigate to `chrome://extensions/` ***or*** Clicking the manage extensions icon, which is located in the Chrome toolbar.
 3. Enable Developer mode in the top-right corner.
 4. Click Load unpacked and select the directory where you saved the HiEmoji project.
