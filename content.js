@@ -9,7 +9,6 @@ function handleKeyDown(event) {
     if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
         if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
             if(!trigger){
-
                 const key = event.key;
                 //filter special keys
                 if (/^[a-zA-Z0-9]$/.test(key)) {
@@ -34,7 +33,7 @@ function handleKeyDown(event) {
 }
 
 function showRandomEmoji() {
-    const emojis = ['😄', '😂', '😍', '😊', '😎', '😜', '🤔', '😢', '😡', '😱', '😇'];
+    const emojis = ['😄', '😂', '😍', '😊', '😎', '😜', '🤔', '😢', '😡', '😱', '😇', '🤠', '😏', '🥳'];
     const randEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 
     //generate random position for emoji pop-up
